@@ -43,7 +43,7 @@ def main():
         observations = []
         actions = []
         for i in range(args.num_rollouts):
-            print('iter', i)
+            #print('iter', i)
             obs = env.reset()
             done = False
             totalr = 0.
@@ -57,7 +57,7 @@ def main():
                 steps += 1
                 if args.render:
                     env.render()
-                if steps % 100 == 0: print("%i/%i"%(steps, max_steps))
+                #if steps % 100 == 0: print("%i/%i"%(steps, max_steps))
                 if steps >= max_steps:
                     break
             returns.append(totalr)
